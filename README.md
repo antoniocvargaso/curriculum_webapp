@@ -13,9 +13,10 @@ Plataforma de portafolio profesional de marca blanca con arquitectura modular, d
 ### 🛠️ Arquitectura White Label
 
 **Desacoplamiento Total:**
-- `config/identity.json` - Datos personales centralizados
+- `config/identity.json` - Datos personales centralizados (Email, Bio, Redes Sociales)
 - `config/theme.json` - Sistema de theming dinámico con CSS Variables
 - `config/i18n.ts` - Soporte nativo multi-idioma (ES, EN, FR, PT)
+- `lib/email/` - Sistema de envío de emails desacoplado (Provider Pattern)
 
 **Inyección de Estilos:**
 El ThemeProvider inyecta automáticamente las variables del `theme.json` como CSS Variables para uso dinámico con Tailwind.
@@ -23,12 +24,13 @@ El ThemeProvider inyecta automáticamente las variables del `theme.json` como CS
 ### 📦 Módulos Incluidos
 
 1. **Navbar** - Selector de idioma, toggle light/dark, menú móvil
-2. **Hero** - Avatar con glow effect, stats dinámicas, bio
+2. **Hero** - Avatar con glow effect, stats dinámicas, bio y enlace de contacto interactivo
 3. **Terminal NOW** - Simulación de terminal Fedora con typing effect
 4. **Mental Sandbox** - Timeline cronológico con badges de estado [LEARNING, SOLVING, BLOCKED, EUREKA]
 5. **Bento Grid** - GitHub stats, redes sociales, The Shelf (libros), Spotify widget
 6. **Engineering Journal** - Blog con categorías (Architecture, Java Lab, Cloud)
 7. **The Hunter** - Widget inteligente de captura de leads con tracking
+8. **Contact** - Formulario funcional integrado con Resend
 
 ### 🔧 Stack Técnico
 
@@ -37,26 +39,34 @@ El ThemeProvider inyecta automáticamente las variables del `theme.json` como CS
 - **Components:** shadcn/ui + Radix UI
 - **Icons:** Lucide React
 - **Animations:** Framer Motion
+- **Email:** Resend (Server Actions + Clean Architecture)
 - **TypeScript:** Tipado completo
 
 ## 🚀 Instalación
 
 ```bash
-# Instalar dependencias
+# Instalar dependencias (incluyendo Resend)
 npm install
 
 # Modo desarrollo
 npm run dev
-
-# Build producción
-npm run build
-npm start
 ```
 
-## 🎯 Personalización
+## ⚙️ Configuración (White Label)
 
-### 1. Modificar Identidad
-Edita `config/identity.json`:
+### 1. Variables de Entorno (Requerido para Email)
+Crea un archivo `.env.local` en la raíz del proyecto para habilitar el formulario de contacto:
+
+```env
+# Clave API de Resend (https://resend.com)
+RESEND_API_KEY=re_123456789...
+
+# Email donde recibirás los mensajes del formulario
+CONTACT_EMAIL=tu-email@dominio.com
+```
+
+### 2. Modificar Identidad
+Edita `config/identity.json`. Todos los componentes (incluyendo Hero, Footer y Contacto) leen de aquí:
 
 ```json
 {
@@ -65,11 +75,12 @@ Edita `config/identity.json`:
   "headline": "Tu Headline",
   "bio": "Tu biografía...",
   "avatar": "/tu-avatar.png",
+  "email": "contacto@tudominio.dev", // Se usa para la funcionalidad del botón de contacto
   "socials": { ... }
 }
 ```
 
-### 2. Personalizar Tema
+### 3. Personalizar Tema
 Edita `config/theme.json`:
 
 ```json
@@ -87,20 +98,19 @@ Edita `config/theme.json`:
 }
 ```
 
-### 3. Añadir Traducciones
+### 4. Añadir Traducciones
 Modifica `config/i18n.ts` para agregar nuevos textos o idiomas.
+- `hero.email_prefix`: Prefijo del botón de email en el Hero.
+- `contact.*`: Textos del formulario de contacto.
 
-## 🔗 Integración con Backend
+## 🔗 Integración Backend & Arquitectura
 
-La plataforma está lista para consumir APIs Java 21. Endpoints sugeridos:
+La plataforma usa Server Actions para procesar formularios, manteniendo la seguridad y velocidad.
 
-```typescript
-// Ejemplo de integración
-GET /api/identity      // Obtener datos de identity.json
-GET /api/articles      // Listar artículos del journal
-POST /api/leads        // Capturar leads desde The Hunter
-GET /api/analytics     // Stats de tracking
-```
+**Estructura de Email:**
+- `lib/email/service.ts`: Interfaz del servicio (Desacoplamiento).
+- `lib/email/providers/resend.ts`: Implementación concreta con Resend.
+- `app/actions/send-email.ts`: Server Action que orquesta el envío.
 
 ## 📊 Analytics & Tracking
 
@@ -108,8 +118,6 @@ El módulo `lib/tracking.ts` incluye un tracker mock que registra:
 - Profundidad de scroll
 - Secciones visitadas
 - Interacciones por categoría
-
-Listo para integrar con servicios reales (Mixpanel, Segment, Google Analytics).
 
 ## 🌐 Multi-idioma
 

@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import { useLocale } from "@/lib/locale-provider"
 import identity from "@/config/identity.json"
+import { sendEmail, ContactFormState } from "@/app/actions/send-email"
 
 const formSchema = z.object({
   name: z.string().min(2),
@@ -22,7 +23,7 @@ const formSchema = z.object({
 export function Contact() {
   const { t } = useLocale()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
+  const [formState, setFormState] = useState<ContactFormState | null>(null)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -35,12 +36,24 @@ export function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    setFormState(null)
+
+    // Create FormData object for the server action
+    const formData = new FormData()
+    formData.append("name", values.name)
+    formData.append("email", values.email)
+    formData.append("message", values.message)
+
+    // Call server action
+    const result = await sendEmail({ success: false }, formData)
+
+    setFormState(result)
     setIsSubmitting(false)
-    setIsSuccess(true)
-    form.reset()
-    setTimeout(() => setIsSuccess(false), 5000)
+
+    if (result.success) {
+      form.reset()
+      setTimeout(() => setFormState(null), 5000)
+    }
   }
 
   return (
@@ -111,6 +124,7 @@ export function Contact() {
                   placeholder="john@example.com"
                   {...form.register("email")}
                   className="bg-background/50"
+                  disabled={isSubmitting}
                 />
                 {form.formState.errors.email && (
                   <p className="text-sm text-destructive">{t.contact.form.invalid_email}</p>
@@ -126,6 +140,7 @@ export function Contact() {
                   placeholder="Tell me about your project..."
                   {...form.register("message")}
                   className="min-h-[120px] bg-background/50"
+                  disabled={isSubmitting}
                 />
                 {form.formState.errors.message && (
                   <p className="text-sm text-destructive">{t.contact.form.required}</p>
@@ -150,9 +165,15 @@ export function Contact() {
                 )}
               </Button>
 
-              {isSuccess && (
+              {formState?.success && (
                 <div className="p-3 bg-green-500/10 border border-green-500/20 rounded-md text-green-500 text-sm text-center animate-in fade-in slide-in-from-bottom-2">
                   {t.contact.form.success}
+                </div>
+              )}
+
+              {formState?.success === false && (
+                <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-md text-red-500 text-sm text-center animate-in fade-in slide-in-from-bottom-2">
+                  {formState.message || t.contact.form.error}
                 </div>
               )}
             </form>
