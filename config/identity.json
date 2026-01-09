@@ -1,0 +1,38 @@
+{
+  "name": "Antonio Vargas",
+  "title": "Senior Software Architect",
+  "headline": "Staff Engineer | Java 21 Expert | Cloud Architect | Ex-CTO",
+  "bio": "Senior Software Engineer with 12+ years building scalable distributed systems. Currently architecting solutions at Amadeus while pursuing Master's in Software Engineering at UNIR. Passionate about system design, high-performance Java applications, and cloud-native architectures.",
+  "avatar": "/placeholder.svg?height=200&width=200",
+  "email": "antonio.vargas@example.com",
+  "location": "Remote | Europe",
+  "socials": {
+    "github": "https://github.com/antoniovargas",
+    "linkedin": "https://linkedin.com/in/antoniovargas",
+    "twitter": "https://x.com/antoniovargas",
+    "discord": "antonio#1234",
+    "instagram": "https://instagram.com/antoniovargas"
+  },
+  "currentFocus": [
+    {
+      "title": "Amadeus Integration",
+      "description": "Building distributed booking systems with Java 21",
+      "tech": ["Java 21", "Spring Boot", "Kafka", "AWS"]
+    },
+    {
+      "title": "Master in Software Engineering",
+      "description": "UNIR - Advanced System Architecture & Design Patterns",
+      "tech": ["Architecture", "DDD", "Microservices"]
+    },
+    {
+      "title": "Nemotech Core",
+      "description": "High-performance data processing engine",
+      "tech": ["Java", "Redis", "PostgreSQL"]
+    }
+  ],
+  "stats": {
+    "yearsExperience": "12+",
+    "projectsDelivered": "50+",
+    "contributions": "2.5K+"
+  }
+}

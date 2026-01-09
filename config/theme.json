@@ -1,0 +1,16 @@
+{
+  "colors": {
+    "primary": "oklch(0.7 0.25 220)",
+    "accent": "oklch(0.65 0.28 180)",
+    "background": "oklch(0.09 0 0)",
+    "foreground": "oklch(0.98 0 0)",
+    "muted": "oklch(0.3 0 0)",
+    "border": "oklch(0.25 0 0)",
+    "glow": "oklch(0.6 0.3 210)"
+  },
+  "borderRadius": "0.25rem",
+  "fontFamily": {
+    "sans": "Geist",
+    "mono": "Geist Mono"
+  }
+}
