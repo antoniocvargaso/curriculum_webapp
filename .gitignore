@@ -29,4 +29,5 @@ package-lock.json
 pdev_log
 
 # images
-/public/*
+/public/*.jpeg
+/public/*.jpg
