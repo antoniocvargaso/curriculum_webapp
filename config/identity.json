@@ -1,0 +1,38 @@
+{
+  "name": "Antonio C. Vargas Ortiz",
+  "title": "Senior Technical leader",
+  "headline": "Staff Engineer | Java 21 Expert | Cloud Architect | Ex-CTO",
+  "bio": "Senior Software Engineer with 12+ years building scalable distributed systems. Currently architecting solutions at Amadeus while pursuing Master's in Software Engineering at UNIR. Passionate about system design, high-performance Java applications, and cloud-native architectures.",
+  "avatar": "/perfil.png",
+  "email": "contacto@antoniocvargaso.dev",
+  "location": "Remote | Latin America",
+  "socials": {
+    "github": "https://github.com/antoniocvargaso",
+    "linkedin": "https://www.linkedin.com/in/antonio-carlos-vargas-ortiz",
+    "twitter": "https://x.com/Antoniocvargaso",
+    "discord": "antoniocvargaso",
+    "instagram": "https://www.instagram.com/antoniocvargaso/"
+  },
+  "currentFocus": [
+    {
+      "title": "Amadeus Integration",
+      "description": "Building distributed booking systems with Java 21",
+      "tech": ["Java 21", "Spring Boot", "Kafka", "AWS"]
+    },
+    {
+      "title": "Master in Software Engineering",
+      "description": "UNIR - Advanced System Architecture & Design Patterns",
+      "tech": ["Architecture", "DDD", "Microservices"]
+    },
+    {
+      "title": "Nemotech Core",
+      "description": "High-performance data processing engine",
+      "tech": ["Java", "Redis", "PostgreSQL"]
+    }
+  ],
+  "stats": {
+    "yearsExperience": "12+",
+    "projectsDelivered": "50+",
+    "contributions": "2.5K+"
+  }
+}
