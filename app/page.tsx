@@ -1,3 +1,4 @@
+import { JsonLd } from "@/components/json-ld"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { TerminalNow } from "@/components/terminal-now"
@@ -12,6 +13,19 @@ export default function Page() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Antonio Vargas",
+        jobTitle: "Senior Software Architect",
+        url: "https://antoniovargas.dev",
+        sameAs: [
+          "https://github.com/antoniovargas",
+          "https://linkedin.com/in/antoniovargas",
+          "https://twitter.com/antoniovargas",
+        ],
+        knowsAbout: ["Java", "Cloud Architecture", "Distributed Systems", "AWS", "Microservices"],
+      }} />
       <TerminalNow />
       <MentalSandbox />
       <BentoGrid />

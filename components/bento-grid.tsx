@@ -7,13 +7,13 @@ import { useLocale } from "@/lib/locale-provider"
 
 const mockGithubStats = {
   repos: 45,
-  stars: 892,
-  contributions: 2547,
+  stars: 1,
+  contributions: 235,
 }
 
 const mockBooks = [
   { title: "Clean Architecture", author: "Robert C. Martin" },
-  { title: "Designing Data-Intensive Applications", author: "Martin Kleppmann" },
+  { title: "blockchain y smart contracts la revolucion de la confianza", author: "Emiliano B. Ocariz " },
 ]
 
 export function BentoGrid() {
