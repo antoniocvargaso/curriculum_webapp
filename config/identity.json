@@ -1,17 +1,17 @@
 {
-  "name": "Antonio Vargas",
-  "title": "Senior Software Architect",
+  "name": "Antonio C. Vargas Ortiz",
+  "title": "Senior Technical leader",
   "headline": "Staff Engineer | Java 21 Expert | Cloud Architect | Ex-CTO",
   "bio": "Senior Software Engineer with 12+ years building scalable distributed systems. Currently architecting solutions at Amadeus while pursuing Master's in Software Engineering at UNIR. Passionate about system design, high-performance Java applications, and cloud-native architectures.",
-  "avatar": "/placeholder.svg?height=200&width=200",
-  "email": "antonio.vargas@example.com",
-  "location": "Remote | Europe",
+  "avatar": "/perfil.png",
+  "email": "contacto@antoniocvargaso.dev",
+  "location": "Remote | Latin America",
   "socials": {
-    "github": "https://github.com/antoniovargas",
-    "linkedin": "https://linkedin.com/in/antoniovargas",
-    "twitter": "https://x.com/antoniovargas",
-    "discord": "antonio#1234",
-    "instagram": "https://instagram.com/antoniovargas"
+    "github": "https://github.com/antoniocvargaso",
+    "linkedin": "https://www.linkedin.com/in/antonio-carlos-vargas-ortiz",
+    "twitter": "https://x.com/Antoniocvargaso",
+    "discord": "antoniocvargaso",
+    "instagram": "https://www.instagram.com/antoniocvargaso/"
   },
   "currentFocus": [
     {

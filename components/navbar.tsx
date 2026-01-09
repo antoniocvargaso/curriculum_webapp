@@ -39,14 +39,13 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="font-mono text-sm font-semibold tracking-tight text-white">
+          <a href="#" className="font-mono text-sm font-semibold tracking-tight text-foreground">
             {"<AV/>"}
           </a>
 
@@ -56,7 +55,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </a>
@@ -68,16 +67,16 @@ export function Navbar() {
             {/* Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">
+                <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
                   <Globe className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800">
+              <DropdownMenuContent align="end" className="bg-popover border-border">
                 {locales.map((l) => (
                   <DropdownMenuItem
                     key={l.code}
                     onClick={() => setLocale(l.code)}
-                    className={`${locale === l.code ? "bg-zinc-800" : ""} text-zinc-300 hover:text-white cursor-pointer`}
+                    className={`${locale === l.code ? "bg-muted" : ""} text-popover-foreground hover:bg-muted cursor-pointer`}
                   >
                     {l.label}
                   </DropdownMenuItem>
@@ -86,7 +85,7 @@ export function Navbar() {
             </DropdownMenu>
 
             {/* Theme Toggle */}
-            <Button variant="ghost" size="icon" onClick={toggleTheme} className="text-zinc-400 hover:text-white">
+            <Button variant="ghost" size="icon" onClick={toggleTheme} className="text-muted-foreground hover:text-foreground">
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
 
@@ -95,7 +94,7 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-zinc-400 hover:text-white"
+              className="md:hidden text-muted-foreground hover:text-foreground"
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -104,13 +103,13 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-zinc-800">
+          <div className="md:hidden py-4 border-t border-border bg-background">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
+                className="block px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >
                 {item.label}
               </a>

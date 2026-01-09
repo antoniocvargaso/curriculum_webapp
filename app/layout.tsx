@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Antonio Vargas - Senior Software Architect",
     description: "Staff Engineer | Java 21 Expert | Cloud Architect",
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`font-sans antialiased bg-zinc-950 text-white`}>
+      <body className={`font-sans antialiased bg-background text-foreground`}>
         <ThemeProvider>
           <LocaleProvider>
             {children}

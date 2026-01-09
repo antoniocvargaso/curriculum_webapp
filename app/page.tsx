@@ -5,6 +5,7 @@ import { MentalSandbox } from "@/components/mental-sandbox"
 import { BentoGrid } from "@/components/bento-grid"
 import { EngineeringJournal } from "@/components/engineering-journal"
 import { TheHunter } from "@/components/the-hunter"
+import { Contact } from "@/components/contact"
 
 export default function Page() {
   return (
@@ -15,12 +16,13 @@ export default function Page() {
       <MentalSandbox />
       <BentoGrid />
       <EngineeringJournal />
+      <Contact />
       <TheHunter />
 
       {/* Footer */}
-      <footer id="contact" className="py-12 px-4 border-t border-zinc-800">
+      <footer id="contact" className="py-12 px-4 border-t border-border bg-card">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-zinc-500 text-sm">Built with Next.js 16, Tailwind CSS, and ❤️ • White Label Ready</p>
+          <p className="text-muted-foreground text-sm">Built with Next.js 16, Tailwind CSS, and ❤️ • White Label Ready</p>
         </div>
       </footer>
     </main>
