@@ -76,6 +76,10 @@ Edita `config/identity.json`. Todos los componentes (incluyendo Hero, Footer y C
   "bio": "Tu biografía...",
   "avatar": "/tu-avatar.png",
   "email": "contacto@tudominio.dev", // Se usa para la funcionalidad del botón de contacto
+  "resume": {
+    "es": "/cv_es.pdf", // Ruta relativa desde public/
+    "en": "/cv_eng.pdf"
+  },
   "socials": { ... }
 }
 ```
