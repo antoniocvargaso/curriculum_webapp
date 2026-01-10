@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Twitter, Mail, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useLocale } from "@/lib/locale-provider"
@@ -91,6 +91,28 @@ export function Hero() {
           </Button>
         </div>
 
+        <div className="flex justify-center gap-4 mb-12">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-border text-foreground hover:bg-muted bg-transparent gap-2"
+            onClick={() => window.open(identity.resume.es, '_blank')}
+          >
+            <Download className="h-4 w-4" />
+            CV (ES)
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-border text-foreground hover:bg-muted bg-transparent gap-2"
+            onClick={() => window.open(identity.resume.en, '_blank')}
+          >
+            <Download className="h-4 w-4" />
+            CV (EN)
+          </Button>
+        </div>
+
+
         {/* Social Links */}
         <div className="flex items-center justify-center gap-4">
           <a
@@ -119,6 +141,6 @@ export function Hero() {
           </a>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
