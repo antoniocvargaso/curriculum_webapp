@@ -30,6 +30,10 @@
       "tech": ["Java", "Redis", "PostgreSQL"]
     }
   ],
+  "resume": {
+    "es": "/cv_es.pdf",
+    "en": "/cv_en.pdf"
+  },
   "stats": {
     "yearsExperience": "12+",
     "projectsDelivered": "50+",
