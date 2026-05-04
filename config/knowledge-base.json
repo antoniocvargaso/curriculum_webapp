@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Clean Architecture Implementation Guide",
+    "type": "manual",
+    "category": "Architecture",
+    "excerpt": "A comprehensive guide on implementing Clean Architecture in modern Java applications.",
+    "content": "Clean Architecture, proposed by Robert C. Martin, aims to create systems that are independent of frameworks, UI, databases, and any external agency. This manual covers the core principles: 1. Independent of Frameworks. 2. Testable. 3. Independent of UI. 4. Independent of Database. 5. Independent of any external agency.",
+    "tags": ["Java", "Architecture", "Best Practices"],
+    "date": "2024-02-01"
+  },
+  {
+    "id": "2",
+    "title": "The Impact of AI on Software Engineering",
+    "type": "article",
+    "category": "AI",
+    "excerpt": "Exploring how Large Language Models are reshaping the way we write and maintain code.",
+    "content": "The landscape of software engineering is undergoing a tectonic shift with the advent of LLMs. From Copilots to automated testing, AI is not just a tool but a collaborator. This article explores the productivity gains and the new challenges in code quality and security.",
+    "tags": ["AI", "Future of Work", "LLM"],
+    "date": "2024-02-05"
+  },
+  {
+    "id": "3",
+    "title": "Post-Mortem: Distributed System Outage",
+    "type": "analysis",
+    "category": "Cloud",
+    "excerpt": "A deep dive analysis into a real-world cascading failure in a microservices environment.",
+    "content": "On January 15th, a misconfigured retry policy led to a 'thundering herd' problem that took down our primary booking service. This analysis breaks down the root cause, the timeline of the incident, and the architectural changes implemented to prevent recurrence, including circuit breakers and better rate limiting.",
+    "tags": ["Cloud", "SRE", "Microservices"],
+    "date": "2024-02-10"
+  }
+]

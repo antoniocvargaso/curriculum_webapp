@@ -27,6 +27,7 @@ export function Navbar() {
     { label: t.nav.experience, href: "#experience" },
     { label: t.nav.projects, href: "#projects" },
     { label: t.nav.journal, href: "#journal" },
+    { label: t.nav.kb, href: "#kb" },
     { label: t.nav.contact, href: "#contact" },
   ]
 

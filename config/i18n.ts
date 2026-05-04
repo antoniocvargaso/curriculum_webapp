@@ -7,6 +7,7 @@ export const translations = {
       experience: "Experience",
       projects: "Projects",
       journal: "Journal",
+      kb: "Knowledge",
       contact: "Contact",
     },
     hero: {
@@ -51,6 +52,17 @@ export const translations = {
         ai: "AI & ML",
       },
     },
+    kb: {
+      title: "Knowledge Base",
+      subtitle: "Technical manuals, articles, and architectural analysis",
+      search: "Search content...",
+      all: "All",
+      manual: "Manuals",
+      article: "Articles",
+      analysis: "Analysis",
+      read_more: "Read More",
+      close: "Close",
+    },
     hunter: {
       message: "I see you're interested in {category}. Want to connect on LinkedIn?",
       placeholder: "your@email.com",
@@ -78,6 +90,7 @@ export const translations = {
       experience: "Experiencia",
       projects: "Proyectos",
       journal: "Blog",
+      kb: "Conocimiento",
       contact: "Contacto",
     },
     hero: {
@@ -122,6 +135,17 @@ export const translations = {
         ai: "IA y ML",
       },
     },
+    kb: {
+      title: "Base de Conocimiento",
+      subtitle: "Manuales técnicos, artículos y análisis de arquitectura",
+      search: "Buscar contenido...",
+      all: "Todo",
+      manual: "Manuales",
+      article: "Artículos",
+      analysis: "Análisis",
+      read_more: "Leer más",
+      close: "Cerrar",
+    },
     hunter: {
       message: "Veo que te interesa {category}. ¿Hablamos en LinkedIn?",
       placeholder: "tu@email.com",
@@ -149,6 +173,7 @@ export const translations = {
       experience: "Expérience",
       projects: "Projets",
       journal: "Blog",
+      kb: "Connaissance",
       contact: "Contact",
     },
     hero: {
@@ -193,6 +218,17 @@ export const translations = {
         ai: "IA et ML",
       },
     },
+    kb: {
+      title: "Base de Connaissance",
+      subtitle: "Manuels techniques, articles et analyses d'architecture",
+      search: "Rechercher...",
+      all: "Tout",
+      manual: "Manuels",
+      article: "Articles",
+      analysis: "Analyses",
+      read_more: "Lire la suite",
+      close: "Fermer",
+    },
     hunter: {
       message: "Je vois que {category} vous intéresse. Parlons sur LinkedIn?",
       placeholder: "votre@email.com",
@@ -220,6 +256,7 @@ export const translations = {
       experience: "Experiência",
       projects: "Projetos",
       journal: "Blog",
+      kb: "Conhecimento",
       contact: "Contato",
     },
     hero: {
@@ -263,6 +300,17 @@ export const translations = {
         cloud: "Cloud & DevOps",
         ai: "IA e ML",
       },
+    },
+    kb: {
+      title: "Base de Conhecimento",
+      subtitle: "Manuais técnicos, artigos e análises de arquitetura",
+      search: "Pesquisar...",
+      all: "Tudo",
+      manual: "Manuais",
+      article: "Artigos",
+      analysis: "Análises",
+      read_more: "Ler mais",
+      close: "Fechar",
     },
     hunter: {
       message: "Vejo que você está interessado em {category}. Quer conversar no LinkedIn?",
