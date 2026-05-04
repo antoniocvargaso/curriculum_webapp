@@ -5,6 +5,7 @@ import { TerminalNow } from "@/components/terminal-now"
 import { MentalSandbox } from "@/components/mental-sandbox"
 import { BentoGrid } from "@/components/bento-grid"
 import { EngineeringJournal } from "@/components/engineering-journal"
+import { KnowledgeBase } from "@/components/knowledge-base"
 import { TheHunter } from "@/components/the-hunter"
 import { Contact } from "@/components/contact"
 
@@ -30,6 +31,7 @@ export default function Page() {
       <MentalSandbox />
       <BentoGrid />
       <EngineeringJournal />
+      <KnowledgeBase />
       <Contact />
       <TheHunter />
 
