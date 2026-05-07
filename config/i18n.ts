@@ -1,4 +1,4 @@
-export type Locale = "en" | "es" | "fr" | "pt"
+export type Locale = "en" | "es" | "fr" | "pt" | "it"
 
 export const translations = {
   en: {
@@ -330,6 +330,89 @@ export const translations = {
         error: "Algo deu errado. Por favor tente novamente.",
         required: "Obrigatório",
         invalid_email: "Email inválido",
+      },
+    },
+  },
+  it: {
+    nav: {
+      about: "Su di me",
+      experience: "Esperienza",
+      projects: "Progetti",
+      journal: "Blog",
+      kb: "Conoscenza",
+      contact: "Contatto",
+    },
+    hero: {
+      greeting: "Ciao, sono",
+      cta: "Guarda il mio lavoro",
+      contact: "Parliamo",
+      email_prefix: "Scrivimi a: ",
+      stats: {
+        experience: "Anni di Esperienza",
+        projects: "Progetti",
+        contributions: "Contributi",
+      },
+    },
+    bento: {
+      title: "Connetti ed Esplora",
+      github: "GitHub",
+      repos: "Repository",
+      stars: "Stelle",
+      contributions: "Contributi",
+      linkedin: "LinkedIn",
+      linkedin_desc: "Rete professionale",
+      twitter_desc: "Approfondimenti tech",
+      instagram_desc: "Dietro le quinte",
+      books: "Lo Scaffale",
+      reading: "Sto leggendo",
+      playlist: "Playlist per programmare",
+    },
+    terminal: {
+      title: "ORA",
+      prompt: "antonio@fedora:~$",
+    },
+    sandbox: {
+      title: "Il Sandbox Mentale",
+      subtitle: "Log di sviluppo e note di apprendimento",
+    },
+    journal: {
+      title: "Diario d'Ingegneria",
+      categories: {
+        architecture: "Architettura",
+        java: "Laboratorio Java",
+        cloud: "Cloud & DevOps",
+        ai: "IA e ML",
+      },
+    },
+    kb: {
+      title: "Base di Conoscenza",
+      subtitle: "Manuali tecnici, articoli e analisi di architettura",
+      search: "Cerca...",
+      all: "Tutto",
+      manual: "Manuali",
+      article: "Articoli",
+      analysis: "Analisi",
+      read_more: "Leggi di più",
+      close: "Chiudi",
+    },
+    hunter: {
+      message: "Vedo che ti interessa {category}. Ti va di connetterti su LinkedIn?",
+      placeholder: "tua@email.com",
+      submit: "Parliamo",
+    },
+    contact: {
+      title: "Mettiamoci in Contatto",
+      subtitle: "Hai un progetto in mente o vuoi solo salutare? Inviami un messaggio.",
+      form: {
+        name: "Nome",
+        email: "Email",
+        message: "Messaggio",
+        submit: "Invia Messaggio",
+        sending: "Invio in corso...",
+        success: "Messaggio inviato con successo!",
+        error: "Qualcosa è andato storto. Riprova.",
+        required: "Obbligatorio",
+        invalid_email: "Email non valida",
       },
     },
   },

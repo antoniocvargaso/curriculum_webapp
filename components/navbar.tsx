@@ -36,6 +36,7 @@ export function Navbar() {
     { code: "es", label: "Español" },
     { code: "fr", label: "Français" },
     { code: "pt", label: "Português" },
+    { code: "it", label: "Italiano" },
   ]
 
   return (
